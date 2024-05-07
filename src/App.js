@@ -22,7 +22,7 @@ function App() {
   console.log(rows, 'rows....')
   return (
     <div className=" w-[100vw] h-[100vh] flex justify-center items-center bg-gray-300 font-light">
-      <div className=' grid grid-rows-10 grid-flow-col phone:py-10 '>
+      <div className=' w-[80%] h-[80%] phone:w-full phone:h-full tab:w-full tab:h-full grid grid-rows-10 grid-flow-col phone:py-10 '>
         <div className='bg-[#F5F6F8] hidden tabXl:flex tab:flex phone:flex justify-between items-center px-5 border-b border-[#BDBDBD] row-span-1 col-span-2 tabXl:col-span-3 tabXl:row-span-1 tab:col-span-3 tab:row-span-1 phone:col-span-3 phone:row-span-1'>
           <p className=' text-[26px] phone:text-[20px] leading-4 font-bold'>
             Google Drive
@@ -56,7 +56,7 @@ function App() {
           </p>
           <div className=' w-[50px] h-[50px] bg-black rounded-full'></div>
         </div>
-        <div className=' w-full h-full bg-white row-span-9 col-span-2 tabXl:col-span-3 tabXl:row-span-8 tab:col-span-3 tab:row-span-8 phone:col-span-3 phone:row-span-8'>
+        <div className=' relative w-full h-full bg-white row-span-9 col-span-2 tabXl:col-span-3 tabXl:row-span-8 tab:col-span-3 tab:row-span-8 phone:col-span-3 phone:row-span-8'>
           <div className=' w-full h-auto mt-5 px-5 font-normal flex flex-col justify-center items-center'>
             <TableContainer component={Paper}>
               <Table sx={{ minWidth: 350 }} aria-label="simple table">
@@ -141,8 +141,9 @@ function App() {
               </Table>
             </TableContainer>
           </div>
-          <div className=' w-full flex justify-center items-center mt-[270px] phone:mt-[200px] tab:mt-[200px] mb-3'>
-            <Stack spacing={2} className=' mt-10'>
+          
+          <div className=' w-full flex justify-center items-center absolute bottom-8'>
+            <Stack spacing={2}>
               <Pagination count={3} color="primary" />
             </Stack>
           </div>
